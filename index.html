@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="mlabdpforlsjhew - Projet de référencement SEO pour IGE511">
+    <meta name="keywords" content="mlabdpforlsjhew, SEO, référencement, IGE511">
+    <title>mlabdpforlsjhew - Projet SEO IGE511</title>
+    
+    <link rel="canonical" href="https://hsia2926.infinityfreeapp.com/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #00ff9f;
+            --secondary: #00d4ff;
+            --accent: #ff00e5;
+            --dark: #0a0e1a;
+            --darker: #050810;
+            --text: #e0e7ff;
+            --glow: rgba(0, 255, 159, 0.5);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background: var(--darker);
+            color: var(--text);
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        /* Animated background grid */
+        .bg-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(0, 255, 159, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 255, 159, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: gridMove 20s linear infinite;
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        @keyframes gridMove {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(50px); }
+        }
+        
+        /* Floating particles */
+        .particle {
+            position: fixed;
+            width: 3px;
+            height: 3px;
+            background: var(--primary);
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 0;
+            animation: float 15s infinite;
+            box-shadow: 0 0 10px var(--glow);
+        }
+        
+        @keyframes float {
+            0%, 100% { opacity: 0; transform: translateY(100vh) translateX(0); }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100px) translateX(100px); }
+        }
+        
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        /* Header */
+        header {
+            text-align: center;
+            padding: 4rem 0;
+            animation: fadeInDown 1s ease-out;
+        }
+        
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(2.5rem, 8vw, 6rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--primary), var(--secondary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+            animation: glow 3s ease-in-out infinite;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .logo::before {
+            content: 'mlabdpforlsjhew';
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            filter: blur(20px);
+            opacity: 0.5;
+            animation: glowPulse 3s ease-in-out infinite;
+        }
+        
+        @keyframes glow {
+            0%, 100% { filter: brightness(1) drop-shadow(0 0 20px var(--glow)); }
+            50% { filter: brightness(1.2) drop-shadow(0 0 40px var(--glow)); }
+        }
+        
+        @keyframes glowPulse {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.7; }
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--secondary);
+            font-weight: 300;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            opacity: 0;
+            animation: fadeIn 1s ease-out 0.5s forwards;
+        }
+        
+        /* Main content */
+        .content {
+            background: rgba(10, 14, 26, 0.6);
+            border: 1px solid rgba(0, 255, 159, 0.2);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 3rem 0;
+            backdrop-filter: blur(10px);
+            animation: fadeInUp 1s ease-out 0.8s backwards;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 159, 0.1), transparent);
+            animation: scan 3s ease-in-out infinite;
+        }
+        
+        @keyframes scan {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+        
+        h1, h2 {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            margin-top: 2rem;
+        }
+        
+        p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            color: rgba(224, 231, 255, 0.9);
+        }
+        
+        .keyword-highlight {
+            color: var(--primary);
+            font-weight: 600;
+            text-shadow: 0 0 10px var(--glow);
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        /* Stats section */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .stat-card {
+            background: rgba(0, 255, 159, 0.05);
+            border: 1px solid var(--primary);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease-out backwards;
+        }
+        
+        .stat-card:nth-child(1) { animation-delay: 1s; }
+        .stat-card:nth-child(2) { animation-delay: 1.2s; }
+        .stat-card:nth-child(3) { animation-delay: 1.4s; }
+        
+        .stat-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 40px var(--glow);
+            border-color: var(--secondary);
+        }
+        
+        .stat-number {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--secondary);
+        }
+        
+        /* Changelog */
+        .changelog {
+            background: rgba(5, 8, 16, 0.8);
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 3rem 0;
+            border-left: 4px solid var(--accent);
+        }
+        
+        .changelog-entry {
+            padding: 1.5rem;
+            border-bottom: 1px solid rgba(0, 255, 159, 0.1);
+            animation: slideInLeft 0.6s ease-out backwards;
+        }
+        
+        .changelog-entry:last-child {
+            border-bottom: none;
+        }
+        
+        .changelog-date {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--secondary);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .changelog-date::before {
+            content: '▸';
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+        
+        .changelog-text {
+            color: var(--text);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            border-top: 1px solid rgba(0, 255, 159, 0.2);
+            margin-top: 4rem;
+            animation: fadeIn 1s ease-out 1.6s backwards;
+        }
+        
+        .footer-info {
+            font-size: 1rem;
+            color: var(--text);
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-highlight {
+            color: var(--primary);
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 600;
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .content {
+                padding: 2rem 1.5rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .stats {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: var(--darker);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 5px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--secondary);
+        }
+    </style>
+</head>
+<body>
+<!-- Background grid -->
+<div class="bg-grid"></div>
+<!-- Floating particles -->
+<div id="particles"></div>
+<div class="container"><!-- Header --><header>
+<h1 class="logo">mlabdpforlsjhew</h1>
+<p class="subtitle">Projet SEO IGE511</p>
+</header><!-- Main content -->
+<div class="content">
+<h1>Bienvenue sur mon projet de référencement</h1>
+<p>Cette page web a été créée dans le cadre du cours <strong>IGE 511 - Aspects informatiques du commerce électronique</strong> à l'Université de Sherbrooke. L'objectif principal est d'optimiser le référencement naturel (SEO) pour le mot-clé unique <span class="keyword-highlight">mlabdpforlsjhew</span>.</p>
+<h2>À propos du projet</h2>
+<p>Le référencement naturel dans les moteurs de recherche est primordial pour générer du trafic organique. Ce projet expérimental vise à tester différentes techniques d'optimisation SEO et à explorer les meilleures pratiques pour positionner une page web sur un mot-clé spécifique : <span class="keyword-highlight">mlabdpforlsjhew</span>.</p>
+<p>À travers ce concours amical, nous explorons les mystères des algorithmes de recherche modernes, testons diverses stratégies d'optimisation et mettons en pratique notre créativité pour améliorer le classement de cette page pour <span class="keyword-highlight">mlabdpforlsjhew</span>.</p>
+<p>
+  Pour plus d’informations sur ce projet SEO, consultez la page principale dédiée au mot-clé
+  <a href="https://hsia2926.infinityfreeapp.com/">mlabdpforlsjhew</a>.
+</p>
+</div>
+<!-- Stats section -->
+<div class="stats">
+<div class="stat-card"><span class="stat-number">SEO</span> <span class="stat-label">Optimisation</span></div>
+<div class="stat-card"><span class="stat-number">100%</span> <span class="stat-label">Créativité</span></div>
+<div class="stat-card"><span class="stat-number">2026</span> <span class="stat-label">Année</span></div>
+</div>
+<!-- Changelog -->
+<div class="changelog">
+<h2>Registre des changements</h2>
+<div class="changelog-entry">
+<div class="changelog-date">26 janvier 2026</div>
+<div class="changelog-text">Déploiement initial de la page web. Mise en place de l'architecture HTML5 sémantique, optimisation des balises meta pour le référencement du mot-clé <span class="keyword-highlight">mlabdpforlsjhew</span>, et intégration d'animations CSS pour améliorer l'expérience utilisateur.</div>
+<div class="changelog-date">26 janvier 2026</div>
+<div class="changelog-text">Configuration de <span class="keyword-highlight">Google Search Console</span>, validation de la propriété du domaine et demande d’indexation initiale de la page.</div>
+</div>
+</div>
+<!-- Footer --><footer>
+<div class="footer-info"><strong class="footer-highlight">Nom:</strong> Adem Hsini</div>
+<div class="footer-info"><strong class="footer-highlight">CIP:</strong> hsia2926</div>
+<div class="footer-info" style="margin-top: 1rem; opacity: 0.7;">© 2026 - Projet IGE511 - Université de Sherbrooke</div>
+</footer></div>
+<p>
+<script>
+        // Generate floating particles
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 30;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 15 + 's';
+                particle.style.animationDuration = (15 + Math.random() * 10) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+        
+        // Stagger changelog animations
+        document.addEventListener('DOMContentLoaded', function() {
+            createParticles();
+            
+            const entries = document.querySelectorAll('.changelog-entry');
+            entries.forEach((entry, index) => {
+                entry.style.animationDelay = (1.8 + index * 0.2) + 's';
+            });
+        });
+        
+        // Add smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</p>
+</body>
+</html>
