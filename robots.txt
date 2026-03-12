@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ademhsini.github.io/sitemap.xml
